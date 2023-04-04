@@ -1,0 +1,155 @@
+:root {
+  --green: #06c167;
+  --light-green: #e6f9f0;
+  --background-green-1: #f3fcf7;
+  --background-green-2: #f3fafb;
+  --background-green-3: #f0f1ec;
+  --dark-grey: #1d1d1f;
+  --grey: #394149;
+  --medium-grey: #999;
+  --light-grey: #eee;
+  --white: #fff;
+
+  --border-radius-small: 10px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--dark-grey);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  border: 2px solid var(--green);
+  padding: 1.8rem 2.8rem;
+  cursor: pointer;
+}
+
+.btn:hover .arrow-icon {
+  animation: arrow-btn 2s infinite;
+}
+
+@keyframes arrow-btn {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-0.5rem);
+  }
+
+  100% {
+    transform: translateX(1rem);
+  }
+}
+
+.btn-green {
+  background-color: var(--green);
+  color: var(--white);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-green:hover {
+  background-color: var(--white);
+  color: var(--green);
+}
+
+.btn-no-border {
+  border: none;
+}
+
+.btn-white {
+  background-color: var(--white);
+  color: var(--green);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0 auto;
+}
+
+.btn-white:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.arrow-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.star-box {
+  display: flex;
+  gap: 6px;
+}
+
+.star-box svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: var(--green);
+}
+
+.green-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: var(--green);
+}
+
+.green-icon-box {
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--background-green-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-small);
+}
+
+.heading-2 {
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 7.2rem;
+  margin-top: 2rem;
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--green);
+}
+
+.heading-4 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 3.8rem;
+}
+
+.text-center {
+  text-align: center;
+}
